@@ -1,5 +1,23 @@
 var dispDate = document.getElementById('currentDay');
 var currentTime = moment().format("H");
+var nineInput = document.getElementById('nineInput');
+var nineSave = document.getElementById('nineSave');
+var tenInput = document.getElementById('tenInput');
+var tenSave = document.getElementById('tenSave');
+var elevenInput = document.getElementById('elevenInput');
+var elevenSave = document.getElementById('elevenSave');
+var twelveInput = document.getElementById('twelveInput');
+var twelveSave = document.getElementById('twelveSave');
+var oneInput = document.getElementById('oneInput');
+var oneSave = document.getElementById('oneSave');
+var twoInput = document.getElementById('twoInput');
+var twoSave = document.getElementById('twoSave');
+var threeInput = document.getElementById('threeInput');
+var threeSave = document.getElementById('threeSave');
+var fourInput = document.getElementById('fourInput');
+var fourSave = document.getElementById('fourSave');
+var fiveInput = document.getElementById('fiveInput');
+var fiveSave = document.getElementById('fiveSave');
 
 var getDate = function () {
     var date = moment().format("dddd, MMMM Do");
