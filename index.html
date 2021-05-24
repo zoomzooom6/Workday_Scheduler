@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -18,7 +15,9 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -30,9 +29,118 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
+      <div class="timeblock row">
+        <div class="time hour col-1" id="nineAM">
+          <p>9 AM</p>
+        </div>
+        <div class="events col-10">
+          <input type="text" class="event-entry" id="" autocomplete="off" />
+        </div>
+        <div class="save col-1">
+          <button type="button" class="saveBtn"><span class="oi oi-box m-auto mb-4"></span></button>
+        </div>
+      </div>
+
+      <div class="timeblock row">
+        <div class="time hour col-1" id="tenAM">
+          <p>10 AM</p>
+        </div>
+        <div class="events col-10">
+          <input type="text" class="event-entry" id="" autocomplete="off" />
+        </div>
+        <div class="save col-1">
+          <button type="button" class="saveBtn"><span class="oi oi-box m-auto mb-4"></span></button>
+        </div>
+      </div>
+
+      <div class="timeblock row">
+        <div class="time hour col-1" id="elevenAM">
+          <p>11 AM</p>
+        </div>
+        <div class="events col-10">
+          <input type="text" class="event-entry" id="" autocomplete="off" />
+        </div>
+        <div class="save col-1">
+          <button type="button" class="saveBtn"><span class="oi oi-box m-auto mb-4"></span></button>
+        </div>
+      </div>
+
+      <div class="timeblock row">
+        <div class="time hour col-1" id="twelvePM">
+          <p>12 PM</p>
+        </div>
+        <div class="events col-10">
+          <input type="text" class="event-entry" id="" autocomplete="off" />
+        </div>
+        <div class="save col-1">
+          <button type="button" class="saveBtn"><span class="oi oi-box m-auto mb-4"></span></button>
+        </div>
+      </div>
+
+      <div class="timeblock row">
+        <div class="time hour col-1" id="onePM">
+          <p>1 PM</p>
+        </div>
+        <div class="events col-10">
+          <input type="text" class="event-entry" id="" autocomplete="off" />
+        </div>
+        <div class="save col-1">
+          <button type="button" class="saveBtn"><span class="oi oi-box m-auto mb-4"></span></button>
+        </div>
+      </div>
+
+      <div class="timeblock row">
+        <div class="time hour col-1" id="twoPM">
+          <p>2 PM</p>
+        </div>
+        <div class="events col-10">
+          <input type="text" class="event-entry" id="" autocomplete="off" />
+        </div>
+        <div class="save col-1">
+          <button type="button" class="saveBtn"><span class="oi oi-box m-auto mb-4"></span></button>
+        </div>
+      </div>
+
+      <div class="timeblock row">
+        <div class="time hour col-1" id="threePM">
+          <p>3 PM</p>
+        </div>
+        <div class="events col-10">
+          <input type="text" class="event-entry" id="" autocomplete="off" />
+        </div>
+        <div class="save col-1">
+          <button type="button" class="saveBtn"><span class="oi oi-box m-auto mb-4"></span></button>
+        </div>
+      </div>
+
+      <div class="timeblock row">
+        <div class="time hour col-1" id="fourPM">
+          <p>4 PM</p>
+        </div>
+        <div class="events col-10">
+          <input type="text" class="event-entry" id="" autocomplete="off" />
+        </div>
+        <div class="save col-1">
+          <button type="button" class="saveBtn"><span class="oi oi-box m-auto mb-4"></span></button>
+        </div>
+      </div>
+
+      <div class="timeblock row">
+        <div class="time hour col-1" id="fivePM">
+          <p>5 PM</p>
+        </div>
+        <div class="events col-10">
+          <input type="text" class="event-entry" id="" autocomplete="off" />
+        </div>
+        <div class="save col-1">
+          <button type="button" class="saveBtn"><span class="oi oi-box m-auto mb-4"></span></button>
+        </div>
+
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="assets/javascript/script.js"></script>
   </body>
 </html>

@@ -1,5 +1,5 @@
 # Work Day Scheduler Challenge
-The purpose of this project is to create a simple calendar application to save events for each hour of the day. Runs in browser and uses HTML and CSS powered by jQuery.
+The purpose of this project is to create a simple calendar application to save events for each hour of a standard business day. Runs in browser and uses HTML and CSS powered by jQuery.
 
 ### Criteria:
 * Display current date at top of page when first loaded
