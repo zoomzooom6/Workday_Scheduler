@@ -156,43 +156,35 @@ var saveTask = function (timeInput) {
         let data = {
             saveLoc, saveIn
         };
-
+        checkArray(data);
         saveArray.push(data);
         saveEvent();
         //checkArray(data);
     }
 }
 
-var checkArray = function (data) {
-    for (var i = 0; i < saveArray.length; i++) {
-        if (saveArray[i].saveLoc === "nineInput") {
-            saveArray[i] = data;
-        } else if (saveArray[i].saveLoc === "tenInput") {
-            saveArray[i] = data;
-        } else if (saveArray[i].saveLoc === "elevenInput") {
-            saveArray[i] = data;
-        } else if (saveArray[i].saveLoc === "twelveInput") {
-            saveArray[i] = data;
-        } else if (saveArray[i].saveLoc === "oneInput") {
-            saveArray[i] = data;
-        } else if (saveArray[i].saveLoc === "twoInput") {
-            saveArray[i] = data;
-        } else if (saveArray[i].saveLoc === "threeInput") {
-            saveArray[i] = data;
-        } else if (saveArray[i].saveLoc === "fourInput") {
-            saveArray[i] = data;
-        } else if (saveArray[i].saveLoc === "fiveInput") {
-            saveArray[i] = data;
+//Check to see if value already exists in array
+var checkArray = function(data) {
+    //console.log(data.saveLoc);
+    //console.log(data.saveIn);
+    for (var i = 0; i < saveArray.length; i++){
+        if (saveArray[i].saveLoc === data.saveLoc) {
+            saveArray.splice(saveArray[i], 1);
+            return;
+        } else {
+            continue;
         }
     }
-    saveArray.push(data);
-    saveEvent();
+    //saveArray.push(data);
+    //saveEvent();
 }
 
+//store array of objects to localStorage
 var saveEvent = function () {
     localStorage.setItem("tasks", JSON.stringify(saveArray));
 }
 
+//load existing objects back into form
 var loadEvent = function () {
     var savedTasks = localStorage.getItem("tasks");
 
@@ -225,10 +217,12 @@ var loadEvent = function () {
     }
 }
 
+//check for time changes every 15 minutes to update colouring
 setInterval(function () {
     changeColor();
 }, 900000);
 
+//eventListeners for each button to save any value inputed
 nineSave.addEventListener("click", function () {
     saveTask(nineInput);
 });
