@@ -31,8 +31,5 @@ Designed by Tony Huang
 ### Main start page
 <img src="./assets/images/Startpage.jpg" alt="Main start page"/>
 
-### Different event timings
-<img src="./assests/images/Eventstimings.jpg" alt="Various event states" />
-
 ### Proof of saving into local storage
 <img src="./assets/images/SavedLocal.jpg" alt="Local Storage entries" />
