@@ -159,7 +159,34 @@ var saveTask = function (timeInput) {
 
         saveArray.push(data);
         saveEvent();
+        //checkArray(data);
     }
+}
+
+var checkArray = function (data) {
+    for (var i = 0; i < saveArray.length; i++) {
+        if (saveArray[i].saveLoc === "nineInput") {
+            saveArray[i] = data;
+        } else if (saveArray[i].saveLoc === "tenInput") {
+            saveArray[i] = data;
+        } else if (saveArray[i].saveLoc === "elevenInput") {
+            saveArray[i] = data;
+        } else if (saveArray[i].saveLoc === "twelveInput") {
+            saveArray[i] = data;
+        } else if (saveArray[i].saveLoc === "oneInput") {
+            saveArray[i] = data;
+        } else if (saveArray[i].saveLoc === "twoInput") {
+            saveArray[i] = data;
+        } else if (saveArray[i].saveLoc === "threeInput") {
+            saveArray[i] = data;
+        } else if (saveArray[i].saveLoc === "fourInput") {
+            saveArray[i] = data;
+        } else if (saveArray[i].saveLoc === "fiveInput") {
+            saveArray[i] = data;
+        }
+    }
+    saveArray.push(data);
+    saveEvent();
 }
 
 var saveEvent = function () {
@@ -175,7 +202,27 @@ var loadEvent = function () {
 
     savedTasks = JSON.parse(savedTasks);
 
-    console.log(Object.keys(savedTasks).length);
+    for (var i = 0; i < savedTasks.length; i++) {
+        if(savedTasks[i].saveLoc == "nineInput") {
+            nineInput.value = savedTasks[i].saveIn;
+        } else if (savedTasks[i].saveLoc == "tenInput") {
+            tenInput.value = savedTasks[i].saveIn;
+        } else if (savedTasks[i].saveLoc == "elevenInput") {
+            elevenInput.value = savedTasks[i].saveIn;
+        } else if (savedTasks[i].saveLoc == "twelveInput") {
+            twelveInput.value = savedTasks[i].saveIn;
+        } else if (savedTasks[i].saveLoc == "oneInput") {
+            oneInput.value = savedTasks[i].saveIn;
+        } else if (savedTasks[i].saveLoc == "twoInput") {
+            twoInput.value = savedTasks[i].saveIn;
+        } else if (savedTasks[i].saveLoc == "threeInput") {
+            threeInput.value = savedTasks[i].saveIn;
+        } else if (savedTasks[i].saveLoc == "fourInput") {
+            fourInput.value = savedTasks[i].saveIn;
+        } else if (savedTasks[i].saveLoc == "fiveInput") {
+            fiveInput.value = savedTasks[i].saveIn;
+        }
+    }
 }
 
 setInterval(function () {
@@ -208,9 +255,6 @@ fourSave.addEventListener("click", function () {
 });
 fiveSave.addEventListener("click", function () {
     saveTask(fiveInput);
-    for (var i = 0; i < saveArray.length; i++) {
-        console.log(saveArray[i].saveLoc);
-    }
 });
 
 loadEvent();
