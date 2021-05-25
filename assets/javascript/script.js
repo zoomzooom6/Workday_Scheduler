@@ -18,11 +18,11 @@ var fourInput = document.getElementById('fourInput');
 var fourSave = document.getElementById('fourSave');
 var fiveInput = document.getElementById('fiveInput');
 var fiveSave = document.getElementById('fiveSave');
+var saveArray = [];
 
 var getDate = function () {
     var date = moment().format("dddd, MMMM Do");
     dispDate.textContent = date;
-    console.log(currentTime);
 }
 
 var changeColor = function () {
@@ -149,9 +149,70 @@ var changeColor = function () {
     }
 }
 
+var saveTask = function (timeInput) {
+    if (timeInput.value !== "") {
+        var saveLoc = timeInput.id;
+        var saveIn = timeInput.value;
+        let data = {
+            saveLoc, saveIn
+        };
+
+        saveArray.push(data);
+        saveEvent();
+    }
+}
+
+var saveEvent = function () {
+    localStorage.setItem("tasks", JSON.stringify(saveArray));
+}
+
+var loadEvent = function () {
+    var savedTasks = localStorage.getItem("tasks");
+
+    if (savedTasks === null) {
+        return false;
+    }
+
+    savedTasks = JSON.parse(savedTasks);
+
+    console.log(Object.keys(savedTasks).length);
+}
+
 setInterval(function () {
     changeColor();
 }, 900000);
 
+nineSave.addEventListener("click", function () {
+    saveTask(nineInput);
+});
+tenSave.addEventListener("click", function () {
+    saveTask(tenInput);
+});
+elevenSave.addEventListener("click", function () {
+    saveTask(elevenInput);
+});
+twelveSave.addEventListener("click", function () {
+    saveTask(twelveInput);
+});
+oneSave.addEventListener("click", function () {
+    saveTask(oneInput);
+});
+twoSave.addEventListener("click", function () {
+    saveTask(twoInput);
+});
+threeSave.addEventListener("click", function () {
+    saveTask(threeInput);
+});
+fourSave.addEventListener("click", function () {
+    saveTask(fourInput);
+});
+fiveSave.addEventListener("click", function () {
+    saveTask(fiveInput);
+    for (var i = 0; i < saveArray.length; i++) {
+        console.log(saveArray[i].saveLoc);
+    }
+});
+
+loadEvent();
 changeColor();
 getDate();
